@@ -33,6 +33,11 @@
 		3FEC86C12191B65A00717ECF /* Desafios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC86C02191B65A00717ECF /* Desafios.swift */; };
 		3FEC86C52191C15D00717ECF /* Cronograma.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC86C42191C15D00717ECF /* Cronograma.swift */; };
 		3FEC86CF2192FCA900717ECF /* MapLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC86CE2192FCA900717ECF /* MapLocation.swift */; };
+		A03E3F4E217BA32B0016BB63 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03E3F4C217BA32B0016BB63 /* Gif.swift */; };
+		A03E3F4F217BA32B0016BB63 /* heart.gif in Resources */ = {isa = PBXBuildFile; fileRef = A03E3F4D217BA32B0016BB63 /* heart.gif */; };
+		A03E3F53217BA33B0016BB63 /* Sensor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03E3F50217BA33B0016BB63 /* Sensor.storyboard */; };
+		A03E3F54217BA33B0016BB63 /* SensorDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03E3F51217BA33B0016BB63 /* SensorDAO.swift */; };
+		A03E3F55217BA33B0016BB63 /* SensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03E3F52217BA33B0016BB63 /* SensorViewController.swift */; };
 		F92196B021907B1E00B9F361 /* PerguntasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92196AF21907B1E00B9F361 /* PerguntasService.swift */; };
 		F92196B221907CDD00B9F361 /* NiveisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92196B121907CDD00B9F361 /* NiveisService.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +71,11 @@
 		3FEC86C02191B65A00717ECF /* Desafios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Desafios.swift; sourceTree = "<group>"; };
 		3FEC86C42191C15D00717ECF /* Cronograma.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cronograma.swift; sourceTree = "<group>"; };
 		3FEC86CE2192FCA900717ECF /* MapLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapLocation.swift; sourceTree = "<group>"; };
+		A03E3F4C217BA32B0016BB63 /* Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
+		A03E3F4D217BA32B0016BB63 /* heart.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = heart.gif; sourceTree = "<group>"; };
+		A03E3F50217BA33B0016BB63 /* Sensor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sensor.storyboard; sourceTree = "<group>"; };
+		A03E3F51217BA33B0016BB63 /* SensorDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorDAO.swift; sourceTree = "<group>"; };
+		A03E3F52217BA33B0016BB63 /* SensorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorViewController.swift; sourceTree = "<group>"; };
 		F92196AF21907B1E00B9F361 /* PerguntasService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerguntasService.swift; sourceTree = "<group>"; };
 		F92196B121907CDD00B9F361 /* NiveisService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiveisService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +119,11 @@
 				3FB8DBA5218B1D770018145A /* MapController.swift */,
 				3FEC86CE2192FCA900717ECF /* MapLocation.swift */,
 				3FB8DBA7218B1D770018145A /* Trilhas.storyboard */,
+				A03E3F50217BA33B0016BB63 /* Sensor.storyboard */,
+				A03E3F51217BA33B0016BB63 /* SensorDAO.swift */,
+				A03E3F52217BA33B0016BB63 /* SensorViewController.swift */,
+				A03E3F4C217BA32B0016BB63 /* Gif.swift */,
+				A03E3F4D217BA32B0016BB63 /* heart.gif */,
 				3F6A96F32191C6090042BC68 /* OpcaoTableViewCell.swift */,
 				3F6A96F12191B8E30042BC68 /* OpcoesDAO.swift */,
 				3FB8DBC6218B3C520018145A /* OpcoesViewController.swift */,
@@ -226,10 +241,12 @@
 			files = (
 				3FB8DBBB218B26550018145A /* Funcionalidade.storyboard in Resources */,
 				3FB8DBB9218B1FF00018145A /* Login.storyboard in Resources */,
+				A03E3F53217BA33B0016BB63 /* Sensor.storyboard in Resources */,
 				3FB8DBB1218B1D770018145A /* LaunchScreen.storyboard in Resources */,
 				3FB8DBAE218B1D770018145A /* Assets.xcassets in Resources */,
 				3FB8DBBD218B26620018145A /* Perfil.storyboard in Resources */,
 				3FB8DBA9218B1D770018145A /* Trilhas.storyboard in Resources */,
+				A03E3F4F217BA32B0016BB63 /* heart.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,8 +257,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A03E3F55217BA33B0016BB63 /* SensorViewController.swift in Sources */,
 				F92196B021907B1E00B9F361 /* PerguntasService.swift in Sources */,
 				F92196B221907CDD00B9F361 /* NiveisService.swift in Sources */,
+				A03E3F4E217BA32B0016BB63 /* Gif.swift in Sources */,
+				A03E3F54217BA33B0016BB63 /* SensorDAO.swift in Sources */,
 				3F08EC48219066C400A314C3 /* Resposta.swift in Sources */,
 				3FB8DBAC218B1D770018145A /* LifeChallenger.xcdatamodeld in Sources */,
 				3F08EC442190548800A314C3 /* TableViewCell.swift in Sources */,
