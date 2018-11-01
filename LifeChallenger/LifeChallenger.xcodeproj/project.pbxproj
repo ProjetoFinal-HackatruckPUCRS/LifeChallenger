@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F08EC3A218B352000A314C3 /* PerguntasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F08EC39218B352000A314C3 /* PerguntasController.swift */; };
 		3FB8DBA4218B1D770018145A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8DBA3218B1D770018145A /* AppDelegate.swift */; };
 		3FB8DBA6218B1D770018145A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8DBA5218B1D770018145A /* ViewController.swift */; };
 		3FB8DBA9218B1D770018145A /* Trilhas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB8DBA7218B1D770018145A /* Trilhas.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F08EC39218B352000A314C3 /* PerguntasController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerguntasController.swift; sourceTree = "<group>"; };
 		3FB8DBA0218B1D770018145A /* LifeChallenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeChallenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB8DBA3218B1D770018145A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FB8DBA5218B1D770018145A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			children = (
 				3FB8DBA3218B1D770018145A /* AppDelegate.swift */,
 				3FB8DBA5218B1D770018145A /* ViewController.swift */,
+				3F08EC39218B352000A314C3 /* PerguntasController.swift */,
 				3FB8DBA7218B1D770018145A /* Trilhas.storyboard */,
 				3FB8DBBA218B26550018145A /* Funcionalidade.storyboard */,
 				3FB8DBBC218B26620018145A /* Perfil.storyboard */,
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FB8DBAC218B1D770018145A /* LifeChallenger.xcdatamodeld in Sources */,
+				3F08EC3A218B352000A314C3 /* PerguntasController.swift in Sources */,
 				3FB8DBA6218B1D770018145A /* ViewController.swift in Sources */,
 				3FB8DBA4218B1D770018145A /* AppDelegate.swift in Sources */,
 			);
@@ -317,6 +321,7 @@
 				3FB8DBB7218B1D770018145A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
