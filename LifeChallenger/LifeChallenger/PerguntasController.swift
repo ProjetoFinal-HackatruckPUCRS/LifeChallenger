@@ -10,13 +10,16 @@ import UIKit
 
 class PerguntasController: UIViewController, UITableViewDataSource {
     
-    
+    var respostas : [Resposta] = []
     var perguntas : [Pergunta] = [];
     var perguntaAtual: Pergunta?;
     var indexPergunta: Int = 0;
     
     override func viewDidLoad() {
-        perguntas.append(Pergunta(pergunta: "Oi", respostas: ["tudo bem?", "nem fala comigo"]))
+        respostas.append(Resposta(resposta:"Sim", peso: 5))
+                         
+        perguntas.append(Pergunta(pergunta: "Você já corre?", respostas: respostas))
+        
         self.perguntaAtual = perguntas[0];
         
         super.viewDidLoad()
@@ -48,7 +51,7 @@ class PerguntasController: UIViewController, UITableViewDataSource {
         if let pergunta = perguntaAtual{
             let resposta = pergunta.respostas[indexPath.row];
             
-            cell.label.text = resposta 
+            cell.label.text = resposta.resposta
         }
         
         return (cell)
