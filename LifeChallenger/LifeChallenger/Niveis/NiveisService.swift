@@ -1,14 +1,7 @@
-//
-//  NiveisService.swift
-//  LifeChallenger
-//
-//  Created by Henrique Urruth on 05/11/18.
-//  Copyright © 2018 student. All rights reserved.
-//
-
 import Foundation
 
 class NiveisService {
+    
     func nivel(pesoTotal : Int) -> String {
         var nivel = "";
         if pesoTotal < 20{
@@ -20,7 +13,7 @@ class NiveisService {
         else{
             nivel = "Avançado"
         }
-        
         return nivel;
     }
+    
 }

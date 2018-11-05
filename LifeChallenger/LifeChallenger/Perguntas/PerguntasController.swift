@@ -2,22 +2,23 @@ import UIKit
 
 class PerguntasController: UIViewController {
     
+    // Services
     var perguntasService = PerguntasService()
     var niveisService = NiveisService()
     
+    // Propriedades
     var perguntas : [Pergunta] = [];
     var perguntaAtual: Pergunta?;
     var indexPergunta: Int = 0;
     var pesoTotal = 0;
     
+    // Outlets
     @IBOutlet weak var tituloPergunta: UILabel!
     
     override func viewDidLoad() {
         self.perguntas = perguntasService.getPerguntas()
-        
         self.perguntaAtual = perguntas[0]
         self.tituloPergunta.text = perguntaAtual?.pergunta
-        
         super.viewDidLoad()
     }
 }
@@ -28,13 +29,8 @@ extension PerguntasController : UITableViewDelegate{
             let resposta = pergunta.respostas[indexPath.row]
             pesoTotal += resposta.peso
             
-        
-            let perguntasRestantes = (perguntas.count - 1) - indexPergunta
-            self.indexPergunta += 1
-            let temNovaPergunta =  perguntasRestantes != 0
-            
-            if temNovaPergunta{
-                perguntaAtual = perguntas[indexPergunta]
+            if temNovaPergunta(){
+                perguntaAtual = obterProximaPergunta()
                 self.tituloPergunta.text = perguntaAtual?.pergunta
                 tableView.reloadData()
             }
@@ -44,11 +40,20 @@ extension PerguntasController : UITableViewDelegate{
         }
     }
     
+    func temNovaPergunta() -> Bool{
+        let perguntasRestantes = (perguntas.count - 1) - indexPergunta
+        return perguntasRestantes != 0
+    }
+    
+    func obterProximaPergunta() -> Pergunta{
+        self.indexPergunta += 1
+        return perguntas[indexPergunta]
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         let novaTela = segue.destination as! NivelController
         let nivel = niveisService.nivel(pesoTotal: pesoTotal)
-        
         novaTela.titulo = "Seu nível é \(nivel)"
     }
 }
@@ -63,12 +68,10 @@ extension PerguntasController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "resposta", for: indexPath) as! CellResposta
-        
         if let pergunta = perguntaAtual{
             let resposta = pergunta.respostas[indexPath.row]
             cell.label.text = resposta.resposta
         }
-        
         return (cell)
     }
 }
