@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Perguntas Controller-->
         <scene sceneID="AFW-Iq-3Ex">
             <objects>
-                <viewController id="l1e-r4-uny" sceneMemberID="viewController">
+                <viewController id="l1e-r4-uny" customClass="PerguntasController" customModule="LifeChallenger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z1m-1M-e3L"/>
                         <viewControllerLayoutGuide type="bottom" id="Yez-Zo-coW"/>
@@ -33,23 +33,29 @@
                                 <rect key="frame" x="16" y="155" width="343" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="azG-NI-g5W" rowHeight="42" style="IBUITableViewCellStyleDefault" id="fEZ-HB-YMy">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="resposta" rowHeight="42" id="fEZ-HB-YMy" customClass="CellResposta" customModule="LifeChallenger" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="42"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fEZ-HB-YMy" id="hvU-0R-8iB">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="41.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="azG-NI-g5W">
-                                                    <rect key="frame" x="15" y="0.0" width="313" height="41.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3O-f6-swt">
+                                                    <rect key="frame" x="8" y="8" width="327" height="25.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="T3O-f6-swt" secondAttribute="bottom" id="LbN-gg-X4D"/>
+                                                <constraint firstItem="T3O-f6-swt" firstAttribute="top" secondItem="hvU-0R-8iB" secondAttribute="topMargin" id="R1b-gt-RR5"/>
+                                                <constraint firstItem="T3O-f6-swt" firstAttribute="leading" secondItem="hvU-0R-8iB" secondAttribute="leadingMargin" id="TWt-8d-ADC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="T3O-f6-swt" secondAttribute="trailing" id="WnR-Yg-RYy"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="label" destination="T3O-f6-swt" id="itD-hM-6F2"/>
                                             <segue destination="SRW-6w-X08" kind="show" id="GCM-R9-6rJ"/>
                                         </connections>
                                     </tableViewCell>
@@ -74,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="-191.19999999999999" y="113.79310344827587"/>
         </scene>
-        <!--View Controller-->
+        <!--Nivel Controller-->
         <scene sceneID="8Gg-vU-ezX">
             <objects>
-                <viewController id="SRW-6w-X08" sceneMemberID="viewController">
+                <viewController id="SRW-6w-X08" customClass="NivelController" customModule="LifeChallenger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ceN-mN-oDf"/>
                         <viewControllerLayoutGuide type="bottom" id="Dut-gT-hh7"/>
@@ -138,10 +144,10 @@
             </objects>
             <point key="canvasLocation" x="584.79999999999995" y="113.79310344827587"/>
         </scene>
-        <!--View Controller-->
+        <!--Material Controller-->
         <scene sceneID="FSh-fv-rsO">
             <objects>
-                <viewController id="PIM-PZ-szs" sceneMemberID="viewController">
+                <viewController id="PIM-PZ-szs" customClass="MaterialController" customModule="LifeChallenger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k4K-l5-4NV"/>
                         <viewControllerLayoutGuide type="bottom" id="OPS-mf-8RO"/>
@@ -215,10 +221,10 @@
             </objects>
             <point key="canvasLocation" x="1360.8" y="113.79310344827587"/>
         </scene>
-        <!--View Controller-->
+        <!--Desafio Controller-->
         <scene sceneID="tiC-8B-ByG">
             <objects>
-                <viewController id="dH6-X7-msf" sceneMemberID="viewController">
+                <viewController id="dH6-X7-msf" customClass="DesafioController" customModule="LifeChallenger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zQ1-fv-27z"/>
                         <viewControllerLayoutGuide type="bottom" id="bP1-Qd-hbu"/>
