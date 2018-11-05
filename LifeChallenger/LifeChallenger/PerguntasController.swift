@@ -1,11 +1,3 @@
-//
-//  PerguntasController.swift
-//  LifeChallenger
-//
-//  Created by student on 01/11/18.
-//  Copyright © 2018 student. All rights reserved.
-//
-
 import UIKit
 
 class PerguntasController: UIViewController, UITableViewDataSource {
@@ -18,9 +10,6 @@ class PerguntasController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tituloPergunta: UILabel!
     
     override func viewDidLoad() {
-        self.perguntaAtual = perguntas[0]
-        self.tituloPergunta.text = perguntaAtual?.pergunta
-        
         respostas.append(Resposta(resposta:"Sim", peso: 5))
         respostas.append(Resposta(resposta: "Não", peso: 3))
         
@@ -28,10 +17,13 @@ class PerguntasController: UIViewController, UITableViewDataSource {
         perguntas.append(Pergunta(pergunta: "Você já caminha na rua como exercício?", respostas: respostas))
         perguntas.append(Pergunta(pergunta: "Você malha?", respostas: respostas))
         
+        self.perguntaAtual = perguntas[0]
+        self.tituloPergunta.text = perguntaAtual?.pergunta
         
         super.viewDidLoad()
         
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -80,7 +72,7 @@ extension PerguntasController : UITableViewDelegate{
                 tableView.reloadData()
             }
             else{
-                
+                performSegue(withIdentifier: "perguntasRespondidas", sender: nil)
             }
         }
     }
