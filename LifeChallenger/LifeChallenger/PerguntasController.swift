@@ -18,10 +18,17 @@ class PerguntasController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tituloPergunta: UILabel!
     
     override func viewDidLoad() {
-        respostas.append(Resposta(resposta:"Sim", peso: 5))
-        perguntas.append(Pergunta(pergunta: "Você já corre?", respostas: respostas))
         self.perguntaAtual = perguntas[0]
         self.tituloPergunta.text = perguntaAtual?.pergunta
+        
+        respostas.append(Resposta(resposta:"Sim", peso: 5))
+        respostas.append(Resposta(resposta: "Não", peso: 3))
+        
+        perguntas.append(Pergunta(pergunta: "Você já corre?", respostas: respostas))
+        perguntas.append(Pergunta(pergunta: "Você já caminha na rua como exercício?", respostas: respostas))
+        perguntas.append(Pergunta(pergunta: "Você malha?", respostas: respostas))
+        
+        
         super.viewDidLoad()
         
     }
