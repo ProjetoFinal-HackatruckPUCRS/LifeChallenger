@@ -9,5 +9,11 @@
 import Foundation
 
 class Resposta {
+    var resposta: String;
+    var peso: Int;
     
+    init (resposta: String, peso: Int) {
+        self.resposta = resposta
+        self.peso = peso
+    }
 }

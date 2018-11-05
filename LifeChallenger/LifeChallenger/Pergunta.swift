@@ -10,10 +10,10 @@ import Foundation
 
 class Pergunta {
     var pergunta: String
-    var respostas: [String];
+    var respostas: [Resposta];
     var respostaSelecionada : String?;
     
-    init (pergunta: String, respostas : [String]) {
+    init (pergunta: String, respostas : [Resposta]) {
         self.pergunta = pergunta;
         self.respostas = respostas;
     }
