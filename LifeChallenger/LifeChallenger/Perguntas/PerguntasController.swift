@@ -1,8 +1,10 @@
 import UIKit
 
-class PerguntasController: UIViewController, UITableViewDataSource {
+class PerguntasController: UIViewController {
     
-    var respostas : [Resposta] = []
+    var perguntasService = PerguntasService()
+    var niveisService = NiveisService()
+    
     var perguntas : [Pergunta] = [];
     var perguntaAtual: Pergunta?;
     var indexPergunta: Int = 0;
@@ -11,64 +13,12 @@ class PerguntasController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tituloPergunta: UILabel!
     
     override func viewDidLoad() {
-        respostas.append(Resposta(resposta:"Sim", peso: 5))
-        respostas.append(Resposta(resposta: "Não", peso: 3))
-        
-        perguntas.append(Pergunta(pergunta: "Você já corre?", respostas: respostas))
-        perguntas.append(Pergunta(pergunta: "Você já caminha na rua como exercício?", respostas: respostas))
-        perguntas.append(Pergunta(pergunta: "Você malha?", respostas: respostas))
+        self.perguntas = perguntasService.getPerguntas()
         
         self.perguntaAtual = perguntas[0]
         self.tituloPergunta.text = perguntaAtual?.pergunta
         
         super.viewDidLoad()
-        
-    }
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // if ultima pergunta vai pra proxima tela
-        // else carrega nova pergunta
-        
-        var novaTela = segue.destination as! NivelController
-        
-        var nivel = "";
-        if pesoTotal < 20{
-         nivel = "Básico"
-        }
-        else if pesoTotal < 40{
-            nivel = "Intermediário"
-        }
-        else{
-            nivel = "Avançado"
-        }
-        
-        
-        novaTela.titulo = "Seu nível é \(nivel)"
-        
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let pergunta = perguntaAtual{
-            return pergunta.respostas.count;
-        }
-        return 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "resposta", for: indexPath) as! CellResposta
-        
-        if let pergunta = perguntaAtual{
-            let resposta = pergunta.respostas[indexPath.row]
-            cell.label.text = resposta.resposta
-        }
-        
-        return (cell)
     }
 }
 
@@ -93,5 +43,32 @@ extension PerguntasController : UITableViewDelegate{
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        let novaTela = segue.destination as! NivelController
+        let nivel = niveisService.nivel(pesoTotal: pesoTotal)
+        
+        novaTela.titulo = "Seu nível é \(nivel)"
+    }
+}
+
+extension PerguntasController : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let pergunta = perguntaAtual{
+            return pergunta.respostas.count;
+        }
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "resposta", for: indexPath) as! CellResposta
+        
+        if let pergunta = perguntaAtual{
+            let resposta = pergunta.respostas[indexPath.row]
+            cell.label.text = resposta.resposta
+        }
+        
+        return (cell)
+    }
 }
