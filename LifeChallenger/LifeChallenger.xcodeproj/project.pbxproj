@@ -76,17 +76,15 @@
 		3FB8DBA2218B1D770018145A /* LifeChallenger */ = {
 			isa = PBXGroup;
 			children = (
+				F9F877312190783900D72EB4 /* Niveis */,
+				F9F87730219077D700D72EB4 /* Perguntas */,
 				3FB8DBA3218B1D770018145A /* AppDelegate.swift */,
 				3FB8DBA5218B1D770018145A /* ViewController.swift */,
-				3F08EC39218B352000A314C3 /* PerguntasController.swift */,
-				3F08EC47219066C400A314C3 /* Resposta.swift */,
-				3F08EC4521905F1C00A314C3 /* Pergunta.swift */,
 				3FB8DBA7218B1D770018145A /* Trilhas.storyboard */,
 				3FB8DBBA218B26550018145A /* Funcionalidade.storyboard */,
 				3F08EC432190548800A314C3 /* TableViewCell.swift */,
 				3F08EC4121904F2300A314C3 /* DesafioController.swift */,
 				3F08EC3F21904EE000A314C3 /* MaterialController.swift */,
-				3F08EC3D21904EB500A314C3 /* NivelController.swift */,
 				3FB8DBBC218B26620018145A /* Perfil.storyboard */,
 				3FB8DBB8218B1FF00018145A /* Login.storyboard */,
 				3FB8DBAD218B1D770018145A /* Assets.xcassets */,
@@ -95,6 +93,24 @@
 				3FB8DBAA218B1D770018145A /* LifeChallenger.xcdatamodeld */,
 			);
 			path = LifeChallenger;
+			sourceTree = "<group>";
+		};
+		F9F87730219077D700D72EB4 /* Perguntas */ = {
+			isa = PBXGroup;
+			children = (
+				3F08EC39218B352000A314C3 /* PerguntasController.swift */,
+				3F08EC47219066C400A314C3 /* Resposta.swift */,
+				3F08EC4521905F1C00A314C3 /* Pergunta.swift */,
+			);
+			path = Perguntas;
+			sourceTree = "<group>";
+		};
+		F9F877312190783900D72EB4 /* Niveis */ = {
+			isa = PBXGroup;
+			children = (
+				3F08EC3D21904EB500A314C3 /* NivelController.swift */,
+			);
+			path = Niveis;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -6,6 +6,7 @@ class PerguntasController: UIViewController, UITableViewDataSource {
     var perguntas : [Pergunta] = [];
     var perguntaAtual: Pergunta?;
     var indexPergunta: Int = 0;
+    var pesoTotal = 0;
     
     @IBOutlet weak var tituloPergunta: UILabel!
     
@@ -34,6 +35,21 @@ class PerguntasController: UIViewController, UITableViewDataSource {
         // if ultima pergunta vai pra proxima tela
         // else carrega nova pergunta
         
+        var novaTela = segue.destination as! NivelController
+        
+        var nivel = "";
+        if pesoTotal < 20{
+         nivel = "Básico"
+        }
+        else if pesoTotal < 40{
+            nivel = "Intermediário"
+        }
+        else{
+            nivel = "Avançado"
+        }
+        
+        
+        novaTela.titulo = "Seu nível é \(nivel)"
         
     }
     
@@ -49,7 +65,6 @@ class PerguntasController: UIViewController, UITableViewDataSource {
         
         if let pergunta = perguntaAtual{
             let resposta = pergunta.respostas[indexPath.row]
-            
             cell.label.text = resposta.resposta
         }
         
@@ -61,6 +76,8 @@ extension PerguntasController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let pergunta = perguntaAtual{
             let resposta = pergunta.respostas[indexPath.row]
+            pesoTotal += resposta.peso
+            
         
             let perguntasRestantes = (perguntas.count - 1) - indexPergunta
             self.indexPergunta += 1

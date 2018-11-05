@@ -98,16 +98,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nível Básico" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88e-bO-P1Y">
-                                <rect key="frame" x="113" y="117" width="149" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="88e-bO-P1Y" secondAttribute="height" multiplier="149:21" id="Uhx-H2-iWH"/>
-                                </constraints>
+                                <rect key="frame" x="32" y="117" width="311" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mbL-C5-59j">
-                                <rect key="frame" x="16" y="153" width="343" height="470"/>
+                                <rect key="frame" x="16" y="162" width="343" height="461"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GeR-YK-czY">
@@ -142,13 +139,16 @@
                         <constraints>
                             <constraint firstItem="mbL-C5-59j" firstAttribute="trailing" secondItem="Rqv-ja-kXm" secondAttribute="trailingMargin" id="82g-Pk-tsO"/>
                             <constraint firstItem="Dut-gT-hh7" firstAttribute="top" secondItem="mbL-C5-59j" secondAttribute="bottom" id="G4s-VS-5Aq"/>
-                            <constraint firstItem="88e-bO-P1Y" firstAttribute="leading" secondItem="Rqv-ja-kXm" secondAttribute="leadingMargin" constant="97" id="az9-9b-Oa0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="88e-bO-P1Y" secondAttribute="trailing" constant="97" id="b1m-w2-QAM"/>
-                            <constraint firstItem="mbL-C5-59j" firstAttribute="top" secondItem="88e-bO-P1Y" secondAttribute="bottom" constant="15" id="czT-bg-nUe"/>
+                            <constraint firstItem="mbL-C5-59j" firstAttribute="top" secondItem="88e-bO-P1Y" secondAttribute="bottom" constant="15" id="LJi-e1-P4V"/>
+                            <constraint firstItem="88e-bO-P1Y" firstAttribute="top" secondItem="ceN-mN-oDf" secondAttribute="bottom" constant="97" id="PN0-r3-1Ws"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="88e-bO-P1Y" secondAttribute="trailing" constant="16" id="gEY-xb-Buv"/>
                             <constraint firstItem="mbL-C5-59j" firstAttribute="leading" secondItem="Rqv-ja-kXm" secondAttribute="leadingMargin" id="srE-5T-kCb"/>
-                            <constraint firstItem="88e-bO-P1Y" firstAttribute="top" secondItem="ceN-mN-oDf" secondAttribute="bottom" constant="97" id="wQZ-fx-iZj"/>
+                            <constraint firstItem="88e-bO-P1Y" firstAttribute="leading" secondItem="Rqv-ja-kXm" secondAttribute="leadingMargin" constant="16" id="u45-7a-75K"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="NivelTitulo" destination="88e-bO-P1Y" id="6Jh-b2-QYz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQj-xt-4oc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
