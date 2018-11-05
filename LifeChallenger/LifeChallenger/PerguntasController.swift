@@ -8,13 +8,21 @@
 
 import UIKit
 
-class PerguntasController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+class PerguntasController: UIViewController, UITableViewDataSource {
+    
+    
+    var perguntas : [Pergunta] = [];
+    var perguntaAtual: Pergunta?;
+    var indexPergunta: Int = 0;
+    
     override func viewDidLoad() {
+        perguntas.append(Pergunta(pergunta: "Oi", respostas: ["tudo bem?", "nem fala comigo"]))
+        self.perguntaAtual = perguntas[0];
+        
         super.viewDidLoad()
-
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -28,15 +36,42 @@ class PerguntasController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if let pergunta = perguntaAtual{
+            return pergunta.respostas.count;
+        }
+        return 0;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       let cell = tableView.dequeueReusableCell(withIdentifier: "resposta", for: indexPath) as! CellResposta
+        let cell = tableView.dequeueReusableCell(withIdentifier: "resposta", for: indexPath) as! CellResposta
         
-        cell.label.text = "oi"
+        if let pergunta = perguntaAtual{
+            let resposta = pergunta.respostas[indexPath.row];
+            
+            cell.label.text = resposta 
+        }
         
         return (cell)
     }
+}
 
+extension PerguntasController : UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let pergunta = perguntaAtual{
+            let resposta = pergunta.respostas[indexPath.row]
+            self.indexPergunta += 1
+            
+            let perguntasRestantes = (perguntas.count - 1) - indexPergunta
+            let temNovaPergunta =  perguntasRestantes != 0
+            
+            if temNovaPergunta{
+                perguntaAtual = perguntas[indexPergunta]
+                tableView.reloadData()
+            }
+            else{
+                
+            }
+        }
+    }
+        
 }
