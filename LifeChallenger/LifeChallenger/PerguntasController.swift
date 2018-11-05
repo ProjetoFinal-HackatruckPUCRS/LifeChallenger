@@ -16,9 +16,12 @@ class PerguntasController: UIViewController, UITableViewDataSource, UITableViewD
 
     override func viewDidLoad() {
         respostas.append(Resposta(resposta:"Sim", peso: 5))
+        respostas.append(Resposta(resposta: "Não", peso: 3))
                          
         perguntas.append(Pergunta(pergunta: "Você já corre?", respostas: respostas))
-        
+        perguntas.append(Pergunta(pergunta: "Você já caminha na rua como exercício?", respostas: respostas))
+        perguntas.append(Pergunta(pergunta: "Você malha?", respostas: respostas))
+            
         self.perguntaAtual = perguntas[0];
         
         super.viewDidLoad()
