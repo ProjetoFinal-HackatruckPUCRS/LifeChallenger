@@ -9,8 +9,15 @@
 import UIKit
 
 class PerguntasController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    
+    var perguntas : [Pergunta] = [];
+    var perguntaAtual: Pergunta?;
 
     override func viewDidLoad() {
+        perguntas.append(Pergunta(pergunta: "Oi", respostas: ["tudo bem?", "nem fala comigo"]))
+        self.perguntaAtual = perguntas[0];
+        
         super.viewDidLoad()
 
     }
@@ -28,13 +35,20 @@ class PerguntasController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if let pergunta = perguntaAtual{
+            return pergunta.respostas.count;
+        }
+        return 0;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        let cell = tableView.dequeueReusableCell(withIdentifier: "resposta", for: indexPath) as! CellResposta
-        
-        cell.label.text = "oi"
+      
+        if let pergunta = perguntaAtual{
+            let resposta = pergunta.respostas[indexPath.row];
+            
+            cell.label.text = resposta 
+        }
         
         return (cell)
     }
