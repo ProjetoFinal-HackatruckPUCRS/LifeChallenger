@@ -15,13 +15,13 @@ class PerguntasController: UIViewController, UITableViewDataSource {
     var perguntaAtual: Pergunta?;
     var indexPergunta: Int = 0;
     
+    @IBOutlet weak var tituloPergunta: UILabel!
+    
     override func viewDidLoad() {
         respostas.append(Resposta(resposta:"Sim", peso: 5))
-                         
         perguntas.append(Pergunta(pergunta: "Você já corre?", respostas: respostas))
-        
-        self.perguntaAtual = perguntas[0];
-        
+        self.perguntaAtual = perguntas[0]
+        self.tituloPergunta.text = perguntaAtual?.pergunta
         super.viewDidLoad()
         
     }
@@ -42,14 +42,14 @@ class PerguntasController: UIViewController, UITableViewDataSource {
         if let pergunta = perguntaAtual{
             return pergunta.respostas.count;
         }
-        return 0;
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "resposta", for: indexPath) as! CellResposta
         
         if let pergunta = perguntaAtual{
-            let resposta = pergunta.respostas[indexPath.row];
+            let resposta = pergunta.respostas[indexPath.row]
             
             cell.label.text = resposta.resposta
         }
@@ -62,13 +62,14 @@ extension PerguntasController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let pergunta = perguntaAtual{
             let resposta = pergunta.respostas[indexPath.row]
-            self.indexPergunta += 1
-            
+        
             let perguntasRestantes = (perguntas.count - 1) - indexPergunta
+            self.indexPergunta += 1
             let temNovaPergunta =  perguntasRestantes != 0
             
             if temNovaPergunta{
                 perguntaAtual = perguntas[indexPergunta]
+                self.tituloPergunta.text = perguntaAtual?.pergunta
                 tableView.reloadData()
             }
             else{
