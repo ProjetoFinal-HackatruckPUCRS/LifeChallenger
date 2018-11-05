@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ofb-iE-56y">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -94,26 +94,33 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIV-1X-sNF">
-                                                            <rect key="frame" x="8" y="8" width="359" height="53.5"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esporte" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zb8-hZ-9nG">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="309" height="53.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zZW-em-pU2">
-                                                                    <rect key="frame" x="309" y="0.0" width="50" height="53.5"/>
-                                                                </imageView>
-                                                            </subviews>
-                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esporte" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zb8-hZ-9nG">
+                                                            <rect key="frame" x="8" y="0.0" width="280" height="62"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="280" id="0rr-C1-By8"/>
+                                                                <constraint firstAttribute="height" constant="62" id="Mog-cR-Bf4"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zZW-em-pU2">
+                                                            <rect key="frame" x="296" y="0.0" width="71" height="62"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="71" id="Ayz-bD-ShJ"/>
+                                                                <constraint firstAttribute="height" constant="62" id="Ryy-eC-a86"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailingMargin" secondItem="yIV-1X-sNF" secondAttribute="trailing" id="5rz-QO-ANl"/>
-                                                        <constraint firstItem="yIV-1X-sNF" firstAttribute="leading" secondItem="qCk-Bd-21O" secondAttribute="leadingMargin" id="UrJ-SL-ohC"/>
-                                                        <constraint firstAttribute="bottomMargin" secondItem="yIV-1X-sNF" secondAttribute="bottom" id="Zz7-Bd-9KY"/>
-                                                        <constraint firstItem="yIV-1X-sNF" firstAttribute="top" secondItem="qCk-Bd-21O" secondAttribute="topMargin" id="eMN-yc-Sbp"/>
+                                                        <constraint firstAttribute="bottom" secondItem="zb8-hZ-9nG" secondAttribute="bottom" constant="7.5" id="EXT-us-K0x"/>
+                                                        <constraint firstItem="zZW-em-pU2" firstAttribute="leading" secondItem="zb8-hZ-9nG" secondAttribute="trailing" constant="8" id="GjG-Gl-P1s"/>
+                                                        <constraint firstItem="zZW-em-pU2" firstAttribute="leading" secondItem="zb8-hZ-9nG" secondAttribute="trailing" constant="8" id="Nqn-3s-ILh"/>
+                                                        <constraint firstAttribute="bottom" secondItem="zZW-em-pU2" secondAttribute="bottom" constant="7.5" id="V82-EY-oqG"/>
+                                                        <constraint firstAttribute="trailing" secondItem="zZW-em-pU2" secondAttribute="trailing" constant="8" id="YUo-Db-ra7"/>
+                                                        <constraint firstItem="zb8-hZ-9nG" firstAttribute="leading" secondItem="qCk-Bd-21O" secondAttribute="leading" constant="8" id="Zf5-Uo-HaJ"/>
+                                                        <constraint firstItem="zZW-em-pU2" firstAttribute="top" secondItem="qCk-Bd-21O" secondAttribute="top" id="qp4-hI-c9E"/>
+                                                        <constraint firstItem="zb8-hZ-9nG" firstAttribute="top" secondItem="qCk-Bd-21O" secondAttribute="top" id="s5o-6e-6SB"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
@@ -122,6 +129,9 @@
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Ofb-iE-56y" id="HVR-Wb-jrT"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                             </stackView>
@@ -136,11 +146,12 @@
                     </view>
                     <connections>
                         <outlet property="questionLabel" destination="Zfo-5I-hWu" id="UAk-JY-c6t"/>
+                        <outlet property="tableView" destination="RiO-Xc-qdz" id="TL3-jj-6qK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBr-Lw-fcf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1562" y="211"/>
+            <point key="canvasLocation" x="-1642" y="211"/>
         </scene>
     </scenes>
 </document>

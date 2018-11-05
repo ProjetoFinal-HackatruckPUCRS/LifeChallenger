@@ -24,4 +24,5 @@ class TrilhasTableViewCell: UITableViewCell {
 
     @IBOutlet weak var labelTrilhas: UILabel!
     
+    
 }

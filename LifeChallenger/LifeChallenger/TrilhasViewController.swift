@@ -12,9 +12,19 @@ class TrilhasViewController: UIViewController, UITableViewDataSource, UITableVie
 
     @IBOutlet weak var questionLabel: UILabel!
     
+    var trilhas : [Trilha] = []
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        TrilhasDAO.getInfo { (trilha) in
+            self.trilhas = trilha
+         self.tableView.reloadData()
+        }
+        
         // Do any additional setup after loading the view.
     }
 
@@ -26,15 +36,18 @@ class TrilhasViewController: UIViewController, UITableViewDataSource, UITableVie
     // MARK: add number of from cloudant
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        
+        return trilhas.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TrilhaCell", for: indexPath) as! TrilhasTableViewCell
         
-        cell.imageTrilhas.image = UIImage(named: <#T##String#>)
-        cell.labelTrilhas.text = ""
+        cell.imageTrilhas.image = UIImage(named: "")
+        cell.labelTrilhas.text = trilhas[indexPath.row].nomeTrilha
+        return cell
     }
     
 
