@@ -45,11 +45,22 @@ class TrilhasViewController: UIViewController, UITableViewDataSource, UITableVie
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TrilhaCell", for: indexPath) as! TrilhasTableViewCell
         
-        cell.imageTrilhas.image = UIImage(named: "")
-        cell.labelTrilhas.text = trilhas[indexPath.row].nomeTrilha
+        let trilhaName = trilhas[indexPath.row].nomeTrilha
+        let imgName = trilhaName + ".png"
+        cell.imageTrilhas.image = UIImage(named:  imgName)
+        cell.labelTrilhas.text = trilhaName
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is OpcoesViewController{
+            let vc = segue.destination as? OpcoesViewController
+            let index = tableView.indexPathForSelectedRow?.row
+            let trilhaParaEnviar = trilhas[index!]
+            
+            vc?.trilha = trilhaParaEnviar
+        }
+    }
 
     /*
     // MARK: - Navigation

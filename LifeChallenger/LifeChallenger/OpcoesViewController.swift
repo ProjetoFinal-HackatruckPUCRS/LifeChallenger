@@ -10,9 +10,15 @@ import UIKit
 
 class OpcoesViewController: UIViewController {
 
+    @IBOutlet weak var tipoTrilha: UILabel!
+    
+    var trilha : Trilha?
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tipoTrilha.text = trilha?.nomeTrilha
+        print(trilha?.nomeTrilha ?? "")
         // Do any additional setup after loading the view.
     }
 
