@@ -11,6 +11,7 @@ import UIKit
 class CellResposta: UITableViewCell {
     
     
+    @IBOutlet weak var labelNivel: UILabel!
     @IBOutlet weak var label: UILabel!
 
     override func awakeFromNib() {
