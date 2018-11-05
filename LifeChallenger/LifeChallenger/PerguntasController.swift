@@ -16,6 +16,7 @@ class PerguntasController: UIViewController, UITableViewDataSource, UITableViewD
 
     override func viewDidLoad() {
         perguntas.append(Pergunta(pergunta: "Oi", respostas: ["tudo bem?", "nem fala comigo"]))
+        //perguntas.append(contentsOf: <#T##Sequence#>)
         self.perguntaAtual = perguntas[0];
         
         super.viewDidLoad()
