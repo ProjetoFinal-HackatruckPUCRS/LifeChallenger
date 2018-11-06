@@ -1,20 +1,20 @@
 //
-//  TrilhasTableViewCell.swift
+//  OpcaoTableViewCell.swift
 //  LifeChallenger
 //
-//  Created by student on 01/11/18.
+//  Created by student on 06/11/18.
 //  Copyright © 2018 student. All rights reserved.
 //
 
 import UIKit
 
-class TrilhasTableViewCell: UITableViewCell {
+class OpcaoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var opcao: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-    
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -22,9 +22,5 @@ class TrilhasTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    @IBOutlet weak var imageTrilhas: UIImageView!
 
-    @IBOutlet weak var labelTrilhas: UILabel!
-    
-    
 }

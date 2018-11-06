@@ -8,17 +8,27 @@
 
 import UIKit
 
-class OpcoesViewController: UIViewController {
+class OpcoesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tipoTrilha: UILabel!
     
+    @IBOutlet weak var tableView: UITableView!
     var trilha : Trilha?
-
+    
+    var opcoes : [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tipoTrilha.text = trilha?.nomeTrilha
-        print(trilha?.nomeTrilha ?? "")
+        
+        
+        OpcoesDAO.getInfo(callback: { (opcoes) in
+            self.opcoes = opcoes
+            print(opcoes)
+            self.tableView.reloadData()
+        }, categoria: (trilha?.nomeTrilha)!)
+
+        
         // Do any additional setup after loading the view.
     }
 
@@ -27,7 +37,18 @@ class OpcoesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return opcoes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "option", for: indexPath) as! OpcaoTableViewCell
+        
+        let opcao = opcoes[indexPath.row]
 
+        cell.opcao.text = opcao
+        return cell
+    }
     /*
     // MARK: - Navigation
 
@@ -39,3 +60,5 @@ class OpcoesViewController: UIViewController {
     */
 
 }
+
+

@@ -20,9 +20,11 @@ class TrilhasViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         
         
+        tableView.separatorStyle = .none
+        tableView.separatorColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
         TrilhasDAO.getInfo { (trilha) in
             self.trilhas = trilha
-         self.tableView.reloadData()
+            self.tableView.reloadData()
         }
         
         // Do any additional setup after loading the view.
@@ -50,6 +52,7 @@ class TrilhasViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.imageTrilhas.image = UIImage(named:  imgName)
         cell.labelTrilhas.text = trilhaName
         return cell
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
