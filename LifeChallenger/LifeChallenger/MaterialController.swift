@@ -8,6 +8,21 @@
 
 import Foundation
 import UIKit
-class MaterialController : UIViewController {
 
+//precisamos que ao seleionar o nivel (tem um array na outra classe de nivel) aqui apareça lista de materiais correspondente
+
+class MaterialController : UIViewController, UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "materiais", for: indexPath) as! CellResposta
+        let text : String = ""
+        
+        cell.label.text = text
+        return (cell)
+    }
 }

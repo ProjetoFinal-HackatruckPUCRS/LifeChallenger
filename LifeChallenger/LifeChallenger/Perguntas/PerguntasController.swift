@@ -7,19 +7,20 @@ class PerguntasController: UIViewController, UITableViewDataSource {
     var perguntaAtual: Pergunta?;
     var indexPergunta: Int = 0;
     var pesoTotal = 0;
+    @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var tituloPergunta: UILabel!
     
     override func viewDidLoad() {
-        respostas.append(Resposta(resposta:"Sim", peso: 5))
-        respostas.append(Resposta(resposta: "Não", peso: 3))
-        
-        perguntas.append(Pergunta(pergunta: "Você já corre?", respostas: respostas))
-        perguntas.append(Pergunta(pergunta: "Você já caminha na rua como exercício?", respostas: respostas))
-        perguntas.append(Pergunta(pergunta: "Você malha?", respostas: respostas))
-        
-        self.perguntaAtual = perguntas[0]
-        self.tituloPergunta.text = perguntaAtual?.pergunta
+
+        PerguntasDAO.getInfo(callback: { (pergunta) in
+            self.perguntas = pergunta
+            self.perguntaAtual = self.perguntas[0]
+            self.tituloPergunta.text = self.perguntas[0].pergunta
+            self.tableView.reloadData()
+            
+        }, opcao: "atletismo")
+       
         
         super.viewDidLoad()
         
@@ -86,7 +87,7 @@ extension PerguntasController : UITableViewDelegate{
             if temNovaPergunta{
                 perguntaAtual = perguntas[indexPergunta]
                 self.tituloPergunta.text = perguntaAtual?.pergunta
-                tableView.reloadData()
+               tableView.reloadData()
             }
             else{
                 performSegue(withIdentifier: "perguntasRespondidas", sender: nil)

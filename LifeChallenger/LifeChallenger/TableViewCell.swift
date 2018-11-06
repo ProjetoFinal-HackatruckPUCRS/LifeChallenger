@@ -13,6 +13,7 @@ class CellResposta: UITableViewCell {
     
     @IBOutlet weak var labelNivel: UILabel!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var labelMaterial: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
