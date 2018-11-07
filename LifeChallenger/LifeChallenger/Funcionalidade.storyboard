@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="l1e-r4-uny">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="l1e-r4-uny">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="42" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xyS-FK-N0e">
-                                <rect key="frame" x="16" y="125" width="343" height="542"/>
+                                <rect key="frame" x="16" y="125" width="343" height="498"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="resposta" rowHeight="42" id="fEZ-HB-YMy" customClass="CellResposta" customModule="LifeChallenger" customModuleProvider="target">
@@ -40,7 +39,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3O-f6-swt">
-                                                    <rect key="frame" x="8" y="8" width="327" height="25.5"/>
+                                                    <rect key="frame" x="15" y="11" width="313" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -126,13 +125,13 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="labelNivel" destination="4vZ-1g-BP9" id="xYU-Ky-rnL"/>
-                                            <segue destination="PIM-PZ-szs" kind="show" id="PgV-zH-u8J"/>
+                                            <outlet property="label" destination="4vZ-1g-BP9" id="GRF-L7-4cR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="SRW-6w-X08" id="wZE-0L-i4A"/>
+                                    <outlet property="delegate" destination="SRW-6w-X08" id="ZI2-V5-JBT"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -149,6 +148,7 @@
                     </view>
                     <connections>
                         <outlet property="NivelTitulo" destination="88e-bO-P1Y" id="6Jh-b2-QYz"/>
+                        <segue destination="PIM-PZ-szs" kind="show" identifier="materialSegue" id="fBr-a3-4Zr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQj-xt-4oc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -185,7 +185,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjn-fH-buF">
-                                                    <rect key="frame" x="8" y="8" width="327" height="27.5"/>
+                                                    <rect key="frame" x="15" y="11" width="313" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -199,13 +199,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="labelMaterial" destination="yjn-fH-buF" id="B0s-s5-Ikc"/>
-                                            <segue destination="dH6-X7-msf" kind="show" id="QVu-u7-bfW"/>
+                                            <outlet property="label" destination="yjn-fH-buF" id="vya-Vf-tf6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="PIM-PZ-szs" id="NwS-CL-v4b"/>
+                                    <outlet property="delegate" destination="PIM-PZ-szs" id="nYR-gH-VqG"/>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDY-mK-0iZ">
@@ -214,6 +214,9 @@
                                     <constraint firstAttribute="height" constant="45" id="bXU-vl-8PE"/>
                                 </constraints>
                                 <state key="normal" title="Ir para o desafio"/>
+                                <connections>
+                                    <segue destination="dH6-X7-msf" kind="show" id="yDq-n9-xde"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
