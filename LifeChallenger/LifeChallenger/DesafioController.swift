@@ -12,5 +12,5 @@ import UIKit
 
 class DesafioController : UIViewController {
     @IBOutlet weak var textoDescricao: UITextView!
-    
+    var titulo : String?
 }

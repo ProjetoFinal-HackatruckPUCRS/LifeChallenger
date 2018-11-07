@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,12 +21,54 @@
                     <view key="view" contentMode="scaleToFill" id="gbk-ly-afj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QXQ-yM-I50">
+                                <rect key="frame" x="16" y="28" width="183" height="177"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFp-k7-bAo">
+                                <rect key="frame" x="166" y="245" width="46" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="E0A-uw-CDg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Batimento cardíaco" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jq-Tm-rus">
+                                <rect key="frame" x="113" y="382" width="148" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="R3z-Tr-3y0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5V-m4-QVu">
+                                <rect key="frame" x="16" y="425" width="343" height="222"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RpA-Xb-V32" firstAttribute="top" secondItem="QXQ-yM-I50" secondAttribute="bottom" constant="462" id="6mG-tP-hdG"/>
+                            <constraint firstItem="7jq-Tm-rus" firstAttribute="leading" secondItem="gbk-ly-afj" secondAttribute="leadingMargin" constant="97" id="Cuo-Hr-dVI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sFp-k7-bAo" secondAttribute="trailing" constant="147" id="FaH-du-5ow"/>
+                            <constraint firstItem="7jq-Tm-rus" firstAttribute="top" secondItem="sFp-k7-bAo" secondAttribute="bottom" constant="102" id="Laj-c9-btZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7jq-Tm-rus" secondAttribute="trailing" constant="98" id="O4C-dJ-VWM"/>
+                            <constraint firstItem="sFp-k7-bAo" firstAttribute="leading" secondItem="gbk-ly-afj" secondAttribute="leadingMargin" constant="150" id="e3n-V3-mcj"/>
+                            <constraint firstItem="QXQ-yM-I50" firstAttribute="top" secondItem="V6b-2k-3p1" secondAttribute="bottom" constant="8" id="gF9-df-d1N"/>
+                            <constraint firstItem="QXQ-yM-I50" firstAttribute="leading" secondItem="gbk-ly-afj" secondAttribute="leadingMargin" id="kxP-fz-hO8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QXQ-yM-I50" secondAttribute="trailing" constant="160" id="r8i-c7-lsW"/>
+                            <constraint firstItem="sFp-k7-bAo" firstAttribute="top" secondItem="QXQ-yM-I50" secondAttribute="bottom" constant="40" id="wex-YQ-Sry"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x4T-kc-Ae1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-552" y="-242"/>
+            <point key="canvasLocation" x="-552.79999999999995" y="-242.42878560719643"/>
         </scene>
     </scenes>
 </document>

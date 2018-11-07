@@ -15,7 +15,7 @@
 		3F08EC4621905F1C00A314C3 /* Pergunta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F08EC4521905F1C00A314C3 /* Pergunta.swift */; };
 		3F08EC48219066C400A314C3 /* Resposta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F08EC47219066C400A314C3 /* Resposta.swift */; };
 		3FB8DBA4218B1D770018145A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8DBA3218B1D770018145A /* AppDelegate.swift */; };
-		3FB8DBA6218B1D770018145A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8DBA5218B1D770018145A /* ViewController.swift */; };
+		3FB8DBA6218B1D770018145A /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8DBA5218B1D770018145A /* MapController.swift */; };
 		3FB8DBA9218B1D770018145A /* Trilhas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB8DBA7218B1D770018145A /* Trilhas.storyboard */; };
 		3FB8DBAC218B1D770018145A /* LifeChallenger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8DBAA218B1D770018145A /* LifeChallenger.xcdatamodeld */; };
 		3FB8DBAE218B1D770018145A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FB8DBAD218B1D770018145A /* Assets.xcassets */; };
@@ -26,6 +26,7 @@
 		3FEC86BF2191A61900717ECF /* PerguntasDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC86BE2191A61900717ECF /* PerguntasDAO.swift */; };
 		3FEC86C12191B65A00717ECF /* Desafios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC86C02191B65A00717ECF /* Desafios.swift */; };
 		3FEC86C52191C15D00717ECF /* Cronograma.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC86C42191C15D00717ECF /* Cronograma.swift */; };
+		3FEC86CF2192FCA900717ECF /* MapLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC86CE2192FCA900717ECF /* MapLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +39,7 @@
 		3F08EC47219066C400A314C3 /* Resposta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resposta.swift; sourceTree = "<group>"; };
 		3FB8DBA0218B1D770018145A /* LifeChallenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeChallenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB8DBA3218B1D770018145A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3FB8DBA5218B1D770018145A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3FB8DBA5218B1D770018145A /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		3FB8DBA8218B1D770018145A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Trilhas.storyboard; sourceTree = "<group>"; };
 		3FB8DBAB218B1D770018145A /* LifeChallenger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LifeChallenger.xcdatamodel; sourceTree = "<group>"; };
 		3FB8DBAD218B1D770018145A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,6 +51,7 @@
 		3FEC86BE2191A61900717ECF /* PerguntasDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PerguntasDAO.swift; path = ../Niveis/PerguntasDAO.swift; sourceTree = "<group>"; };
 		3FEC86C02191B65A00717ECF /* Desafios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Desafios.swift; sourceTree = "<group>"; };
 		3FEC86C42191C15D00717ECF /* Cronograma.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cronograma.swift; sourceTree = "<group>"; };
+		3FEC86CE2192FCA900717ECF /* MapLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +89,8 @@
 				F9F877312190783900D72EB4 /* Niveis */,
 				F9F87730219077D700D72EB4 /* Perguntas */,
 				3FB8DBA3218B1D770018145A /* AppDelegate.swift */,
-				3FB8DBA5218B1D770018145A /* ViewController.swift */,
+				3FB8DBA5218B1D770018145A /* MapController.swift */,
+				3FEC86CE2192FCA900717ECF /* MapLocation.swift */,
 				3FB8DBA7218B1D770018145A /* Trilhas.storyboard */,
 				3FB8DBBA218B26550018145A /* Funcionalidade.storyboard */,
 				3FEC86C42191C15D00717ECF /* Cronograma.swift */,
@@ -219,7 +222,8 @@
 				3FEC86C12191B65A00717ECF /* Desafios.swift in Sources */,
 				3F08EC3A218B352000A314C3 /* PerguntasController.swift in Sources */,
 				3F08EC3E21904EB500A314C3 /* NivelController.swift in Sources */,
-				3FB8DBA6218B1D770018145A /* ViewController.swift in Sources */,
+				3FB8DBA6218B1D770018145A /* MapController.swift in Sources */,
+				3FEC86CF2192FCA900717ECF /* MapLocation.swift in Sources */,
 				3F08EC4021904EE000A314C3 /* MaterialController.swift in Sources */,
 				3FB8DBA4218B1D770018145A /* AppDelegate.swift in Sources */,
 				3FEC86C52191C15D00717ECF /* Cronograma.swift in Sources */,

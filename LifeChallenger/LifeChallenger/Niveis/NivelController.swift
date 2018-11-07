@@ -36,5 +36,19 @@ class NivelController: UIViewController, UITableViewDataSource {
         
         return (cell)
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // if ultima pergunta vai pra proxima tela
+//        // else carrega nova pergunta
+//        
+//        var novaTela = segue.destination as! DesafioController
+//        
+//        let desafio = "1";
+//        
+//        
+//        
+//        novaTela.titulo = "Seu nível é \(desafio)"
+//        
+//    }
 
 }
