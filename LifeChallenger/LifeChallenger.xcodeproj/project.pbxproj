@@ -14,6 +14,10 @@
 		3F08EC442190548800A314C3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F08EC432190548800A314C3 /* TableViewCell.swift */; };
 		3F08EC4621905F1C00A314C3 /* Pergunta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F08EC4521905F1C00A314C3 /* Pergunta.swift */; };
 		3F08EC48219066C400A314C3 /* Resposta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F08EC47219066C400A314C3 /* Resposta.swift */; };
+		3F6A96F22191B8E30042BC68 /* OpcoesDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6A96F12191B8E30042BC68 /* OpcoesDAO.swift */; };
+		3F6A96F42191C6090042BC68 /* OpcaoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6A96F32191C6090042BC68 /* OpcaoTableViewCell.swift */; };
+		3F75492621905E3A00E4A9E6 /* TrilhasDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75492521905E3A00E4A9E6 /* TrilhasDAO.swift */; };
+		3F75492821906E8B00E4A9E6 /* esportes.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F75492721906E8B00E4A9E6 /* esportes.png */; };
 		3FB8DBA4218B1D770018145A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8DBA3218B1D770018145A /* AppDelegate.swift */; };
 		3FB8DBA6218B1D770018145A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8DBA5218B1D770018145A /* ViewController.swift */; };
 		3FB8DBA9218B1D770018145A /* Trilhas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB8DBA7218B1D770018145A /* Trilhas.storyboard */; };
@@ -25,9 +29,6 @@
 		3FB8DBBD218B26620018145A /* Perfil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB8DBBC218B26620018145A /* Perfil.storyboard */; };
 		F92196B021907B1E00B9F361 /* PerguntasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92196AF21907B1E00B9F361 /* PerguntasService.swift */; };
 		F92196B221907CDD00B9F361 /* NiveisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92196B121907CDD00B9F361 /* NiveisService.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXFileReference section */
 		3F08EC39218B352000A314C3 /* PerguntasController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerguntasController.swift; sourceTree = "<group>"; };
 		3F08EC3D21904EB500A314C3 /* NivelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NivelController.swift; sourceTree = "<group>"; };
 		3F08EC3F21904EE000A314C3 /* MaterialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialController.swift; sourceTree = "<group>"; };
@@ -35,6 +36,13 @@
 		3F08EC432190548800A314C3 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		3F08EC4521905F1C00A314C3 /* Pergunta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pergunta.swift; sourceTree = "<group>"; };
 		3F08EC47219066C400A314C3 /* Resposta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resposta.swift; sourceTree = "<group>"; };
+		3FB8DBC3218B32EF0018145A /* TrilhasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8DBC2218B32EF0018145A /* TrilhasViewController.swift */; };
+		3FB8DBC5218B33AF0018145A /* TrilhasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8DBC4218B33AF0018145A /* TrilhasTableViewCell.swift */; };
+		3FB8DBC7218B3C520018145A /* OpcoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8DBC6218B3C520018145A /* OpcoesViewController.swift */; };
+		3F6A96F12191B8E30042BC68 /* OpcoesDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpcoesDAO.swift; sourceTree = "<group>"; };
+		3F6A96F32191C6090042BC68 /* OpcaoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpcaoTableViewCell.swift; sourceTree = "<group>"; };
+		3F75492521905E3A00E4A9E6 /* TrilhasDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrilhasDAO.swift; path = ../TrilhasDAO.swift; sourceTree = "<group>"; };
+		3F75492721906E8B00E4A9E6 /* esportes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = esportes.png; path = LifeChallenger/esportes.png; sourceTree = "<group>"; };
 		3FB8DBA0218B1D770018145A /* LifeChallenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeChallenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB8DBA3218B1D770018145A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FB8DBA5218B1D770018145A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +56,9 @@
 		3FB8DBBC218B26620018145A /* Perfil.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Perfil.storyboard; sourceTree = "<group>"; };
 		F92196AF21907B1E00B9F361 /* PerguntasService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerguntasService.swift; sourceTree = "<group>"; };
 		F92196B121907CDD00B9F361 /* NiveisService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiveisService.swift; sourceTree = "<group>"; };
+		3FB8DBC2218B32EF0018145A /* TrilhasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrilhasViewController.swift; sourceTree = "<group>"; };
+		3FB8DBC4218B33AF0018145A /* TrilhasTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrilhasTableViewCell.swift; sourceTree = "<group>"; };
+		3FB8DBC6218B3C520018145A /* OpcoesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpcoesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +75,7 @@
 		3FB8DB97218B1D770018145A = {
 			isa = PBXGroup;
 			children = (
+				3F75492721906E8B00E4A9E6 /* esportes.png */,
 				3FB8DBA2218B1D770018145A /* LifeChallenger */,
 				3FB8DBA1218B1D770018145A /* Products */,
 			);
@@ -82,9 +94,15 @@
 			children = (
 				F9F877312190783900D72EB4 /* Niveis */,
 				F9F87730219077D700D72EB4 /* Perguntas */,
+				3F75492521905E3A00E4A9E6 /* TrilhasDAO.swift */,
 				3FB8DBA3218B1D770018145A /* AppDelegate.swift */,
 				3FB8DBA5218B1D770018145A /* ViewController.swift */,
 				3FB8DBA7218B1D770018145A /* Trilhas.storyboard */,
+				3F6A96F32191C6090042BC68 /* OpcaoTableViewCell.swift */,
+				3F6A96F12191B8E30042BC68 /* OpcoesDAO.swift */,
+				3FB8DBC6218B3C520018145A /* OpcoesViewController.swift */,
+				3FB8DBC4218B33AF0018145A /* TrilhasTableViewCell.swift */,
+				3FB8DBC2218B32EF0018145A /* TrilhasViewController.swift */,
 				3FB8DBBA218B26550018145A /* Funcionalidade.storyboard */,
 				3F08EC432190548800A314C3 /* TableViewCell.swift */,
 				3F08EC4121904F2300A314C3 /* DesafioController.swift */,
@@ -184,6 +202,7 @@
 				3FB8DBAE218B1D770018145A /* Assets.xcassets in Resources */,
 				3FB8DBBD218B26620018145A /* Perfil.storyboard in Resources */,
 				3FB8DBA9218B1D770018145A /* Trilhas.storyboard in Resources */,
+				3F75492821906E8B00E4A9E6 /* esportes.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +225,15 @@
 				3FB8DBA4218B1D770018145A /* AppDelegate.swift in Sources */,
 				3F08EC4621905F1C00A314C3 /* Pergunta.swift in Sources */,
 				3F08EC4221904F2300A314C3 /* DesafioController.swift in Sources */,
+				3F75492621905E3A00E4A9E6 /* TrilhasDAO.swift in Sources */,
+				3FB8DBC3218B32EF0018145A /* TrilhasViewController.swift in Sources */,
+				3FB8DBC7218B3C520018145A /* OpcoesViewController.swift in Sources */,
+				3FB8DBAC218B1D770018145A /* LifeChallenger.xcdatamodeld in Sources */,
+				3F6A96F42191C6090042BC68 /* OpcaoTableViewCell.swift in Sources */,
+				3FB8DBA6218B1D770018145A /* ViewController.swift in Sources */,
+				3FB8DBC5218B33AF0018145A /* TrilhasTableViewCell.swift in Sources */,
+				3FB8DBA4218B1D770018145A /* AppDelegate.swift in Sources */,
+				3F6A96F22191B8E30042BC68 /* OpcoesDAO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
