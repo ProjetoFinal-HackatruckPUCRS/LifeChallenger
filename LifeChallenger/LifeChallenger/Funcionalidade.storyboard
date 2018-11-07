@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="l1e-r4-uny">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="owg-lD-8S2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -253,16 +253,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zhX-fS-MNi">
-                                <rect key="frame" x="16" y="227" width="343" height="220"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="220" id="b3s-rG-WOc"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAz-pH-mFA">
                                 <rect key="frame" x="105" y="562" width="164" height="45"/>
                                 <constraints>
@@ -285,21 +275,42 @@
                                     <segue destination="pSb-x3-A8e" kind="show" id="GuV-TU-v0B"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5s-Te-7VG">
+                                <rect key="frame" x="108" y="464" width="159" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="iGx-hg-zQj"/>
+                                </constraints>
+                                <state key="normal" title="Ver batimento cardíaco"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zhX-fS-MNi">
+                                <rect key="frame" x="16" y="197" width="343" height="220"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="b3s-rG-WOc"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="46D-fa-kI5" firstAttribute="leading" secondItem="CTS-Ge-zmh" secondAttribute="leadingMargin" id="5xE-ub-oyT"/>
-                            <constraint firstItem="zhX-fS-MNi" firstAttribute="top" secondItem="46D-fa-kI5" secondAttribute="bottom" constant="80" id="Dvi-vZ-jRu"/>
+                            <constraint firstItem="zhX-fS-MNi" firstAttribute="top" secondItem="46D-fa-kI5" secondAttribute="bottom" constant="50" id="Dvi-vZ-jRu"/>
                             <constraint firstItem="eAz-pH-mFA" firstAttribute="top" secondItem="fB4-vN-GNI" secondAttribute="bottom" constant="8" id="JrD-8V-vyg"/>
+                            <constraint firstItem="fB4-vN-GNI" firstAttribute="top" secondItem="j5s-Te-7VG" secondAttribute="bottom" id="Sku-89-hFo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fB4-vN-GNI" secondAttribute="trailing" constant="90" id="Tpi-Hv-9Pr"/>
                             <constraint firstItem="46D-fa-kI5" firstAttribute="top" secondItem="zQ1-fv-27z" secondAttribute="bottom" constant="97" id="baT-Zb-tbU"/>
                             <constraint firstItem="eAz-pH-mFA" firstAttribute="leading" secondItem="CTS-Ge-zmh" secondAttribute="leadingMargin" constant="89" id="ktf-Wl-Y2q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="j5s-Te-7VG" secondAttribute="trailing" constant="92" id="mnW-hj-CxU"/>
                             <constraint firstItem="zhX-fS-MNi" firstAttribute="trailing" secondItem="CTS-Ge-zmh" secondAttribute="trailingMargin" id="oTX-r4-0Um"/>
                             <constraint firstItem="fB4-vN-GNI" firstAttribute="leading" secondItem="CTS-Ge-zmh" secondAttribute="leadingMargin" constant="90" id="rba-MG-t2A"/>
                             <constraint firstItem="zhX-fS-MNi" firstAttribute="leading" secondItem="CTS-Ge-zmh" secondAttribute="leadingMargin" id="sSA-Si-WE4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="46D-fa-kI5" secondAttribute="trailing" id="sec-KK-SVP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eAz-pH-mFA" secondAttribute="trailing" constant="90" id="x4W-Ex-M9a"/>
-                            <constraint firstItem="fB4-vN-GNI" firstAttribute="top" secondItem="zhX-fS-MNi" secondAttribute="bottom" constant="62" id="zyo-D5-6Vf"/>
+                            <constraint firstItem="j5s-Te-7VG" firstAttribute="leading" secondItem="CTS-Ge-zmh" secondAttribute="leadingMargin" constant="92" id="xK3-Gx-n6Y"/>
+                            <constraint firstItem="j5s-Te-7VG" firstAttribute="top" secondItem="zhX-fS-MNi" secondAttribute="bottom" constant="47" id="yFo-EV-201"/>
+                            <constraint firstItem="fB4-vN-GNI" firstAttribute="top" secondItem="zhX-fS-MNi" secondAttribute="bottom" constant="92" id="zyo-D5-6Vf"/>
                         </constraints>
                     </view>
                     <connections>

@@ -17,11 +17,11 @@ class ViewController: UIViewController {
     let locationManager = CLLocationManager()
     
     let workLocation = CLLocation(latitude: -30.0593446, longitude: -51.1756799)
-    let homeLocation = CLLocation(latitude: -30.0697004, longitude: -51.2047768)
+    let homeLocation = CLLocation(latitude: -30.0644842, longitude: -51.2031559)
     
-    @IBAction func CalculateRoutes(_ sender: UIButton) {
-        setupRota()
-    }
+//    @IBAction func CalculateRoutes(_ sender: UIButton) {
+//        setupRota()
+//    }
     
     
     override func viewDidLoad() {
