@@ -14,6 +14,11 @@
 		3F08EC442190548800A314C3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F08EC432190548800A314C3 /* TableViewCell.swift */; };
 		3F08EC4621905F1C00A314C3 /* Pergunta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F08EC4521905F1C00A314C3 /* Pergunta.swift */; };
 		3F08EC48219066C400A314C3 /* Resposta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F08EC47219066C400A314C3 /* Resposta.swift */; };
+		3F55DE512193156300207607 /* SensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F55DE502193156300207607 /* SensorViewController.swift */; };
+		3F55DE532193160800207607 /* SensorDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F55DE522193160800207607 /* SensorDAO.swift */; };
+		3F55DE5721931A5200207607 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F55DE5621931A5200207607 /* Gif.swift */; };
+		3F55DE592193204300207607 /* heart.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3F55DE582193204300207607 /* heart.gif */; };
+		3F55DE5D2193219D00207607 /* Sensor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F55DE5C2193219D00207607 /* Sensor.storyboard */; };
 		3F6A96F22191B8E30042BC68 /* OpcoesDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6A96F12191B8E30042BC68 /* OpcoesDAO.swift */; };
 		3F6A96F42191C6090042BC68 /* OpcaoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6A96F32191C6090042BC68 /* OpcaoTableViewCell.swift */; };
 		3F75492621905E3A00E4A9E6 /* TrilhasDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75492521905E3A00E4A9E6 /* TrilhasDAO.swift */; };
@@ -45,6 +50,11 @@
 		3F08EC432190548800A314C3 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		3F08EC4521905F1C00A314C3 /* Pergunta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pergunta.swift; sourceTree = "<group>"; };
 		3F08EC47219066C400A314C3 /* Resposta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resposta.swift; sourceTree = "<group>"; };
+		3F55DE502193156300207607 /* SensorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorViewController.swift; sourceTree = "<group>"; };
+		3F55DE522193160800207607 /* SensorDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorDAO.swift; sourceTree = "<group>"; };
+		3F55DE5621931A5200207607 /* Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
+		3F55DE582193204300207607 /* heart.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = heart.gif; path = LifeChallenger/heart.gif; sourceTree = "<group>"; };
+		3F55DE5C2193219D00207607 /* Sensor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sensor.storyboard; sourceTree = "<group>"; };
 		3F6A96F12191B8E30042BC68 /* OpcoesDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpcoesDAO.swift; sourceTree = "<group>"; };
 		3F6A96F32191C6090042BC68 /* OpcaoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpcaoTableViewCell.swift; sourceTree = "<group>"; };
 		3F75492521905E3A00E4A9E6 /* TrilhasDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrilhasDAO.swift; path = ../TrilhasDAO.swift; sourceTree = "<group>"; };
@@ -84,6 +94,11 @@
 		3FB8DB97218B1D770018145A = {
 			isa = PBXGroup;
 			children = (
+				3F55DE5C2193219D00207607 /* Sensor.storyboard */,
+				3F55DE582193204300207607 /* heart.gif */,
+				3F55DE5621931A5200207607 /* Gif.swift */,
+				3F55DE522193160800207607 /* SensorDAO.swift */,
+				3F55DE502193156300207607 /* SensorViewController.swift */,
 				3FB8DBA2218B1D770018145A /* LifeChallenger */,
 				3FB8DBA1218B1D770018145A /* Products */,
 			);
@@ -226,10 +241,12 @@
 			files = (
 				3FB8DBBB218B26550018145A /* Funcionalidade.storyboard in Resources */,
 				3FB8DBB9218B1FF00018145A /* Login.storyboard in Resources */,
+				3F55DE5D2193219D00207607 /* Sensor.storyboard in Resources */,
 				3FB8DBB1218B1D770018145A /* LaunchScreen.storyboard in Resources */,
 				3FB8DBAE218B1D770018145A /* Assets.xcassets in Resources */,
 				3FB8DBBD218B26620018145A /* Perfil.storyboard in Resources */,
 				3FB8DBA9218B1D770018145A /* Trilhas.storyboard in Resources */,
+				3F55DE592193204300207607 /* heart.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +260,7 @@
 				F92196B021907B1E00B9F361 /* PerguntasService.swift in Sources */,
 				F92196B221907CDD00B9F361 /* NiveisService.swift in Sources */,
 				3F08EC48219066C400A314C3 /* Resposta.swift in Sources */,
+				3F55DE532193160800207607 /* SensorDAO.swift in Sources */,
 				3FB8DBAC218B1D770018145A /* LifeChallenger.xcdatamodeld in Sources */,
 				3F08EC442190548800A314C3 /* TableViewCell.swift in Sources */,
 				3FEC86C12191B65A00717ECF /* Desafios.swift in Sources */,
@@ -254,13 +272,15 @@
 				3FB8DBA4218B1D770018145A /* AppDelegate.swift in Sources */,
 				3FEC86C52191C15D00717ECF /* Cronograma.swift in Sources */,
 				3FEC86BF2191A61900717ECF /* PerguntasDAO.swift in Sources */,
+				3F55DE512193156300207607 /* SensorViewController.swift in Sources */,
 				3F08EC4621905F1C00A314C3 /* Pergunta.swift in Sources */,
 				3F08EC4221904F2300A314C3 /* DesafioController.swift in Sources */,
 				3F75492621905E3A00E4A9E6 /* TrilhasDAO.swift in Sources */,
 				3FB8DBC3218B32EF0018145A /* TrilhasViewController.swift in Sources */,
 				3FB8DBC7218B3C520018145A /* OpcoesViewController.swift in Sources */,
 				3FB8DBAC218B1D770018145A /* LifeChallenger.xcdatamodeld in Sources */,
-				3F6A96F42191C6090042BC68 /* OpcaoTableViewCell.swift in Sources */,				
+				3F55DE5721931A5200207607 /* Gif.swift in Sources */,
+				3F6A96F42191C6090042BC68 /* OpcaoTableViewCell.swift in Sources */,
 				3FB8DBC5218B33AF0018145A /* TrilhasTableViewCell.swift in Sources */,
 				3F6A96F22191B8E30042BC68 /* OpcoesDAO.swift in Sources */,
 			);
