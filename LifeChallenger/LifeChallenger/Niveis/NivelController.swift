@@ -1,20 +1,11 @@
-//
-//  NivelController.swift
-//  LifeChallenger
-//
-//  Created by student on 05/11/18.
-//  Copyright © 2018 student. All rights reserved.
-//
-
 import UIKit
 
 class NivelController: UIViewController, UITableViewDataSource {
     
-    
-    var desafios: [Desafios] = []
     var titulo : String?
+    var desafios: [Desafios] = []
     @IBOutlet weak var NivelTitulo: UILabel!
-
+    
     override func viewDidLoad() {
         NivelTitulo.text = titulo
         desafios.append(Desafios(desafio: "Nível 1", descr: "Neste nível você irá se preparar para o decorrer dos desafios intermediários", materiais: ["Tenis de corrida","Camisa anti suor","E nosso medidor de batimento de cardíaco"]))
@@ -36,19 +27,5 @@ class NivelController: UIViewController, UITableViewDataSource {
         
         return (cell)
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // if ultima pergunta vai pra proxima tela
-//        // else carrega nova pergunta
-//        
-//        var novaTela = segue.destination as! DesafioController
-//        
-//        let desafio = "1";
-//        
-//        
-//        
-//        novaTela.titulo = "Seu nível é \(desafio)"
-//        
-//    }
 
 }
