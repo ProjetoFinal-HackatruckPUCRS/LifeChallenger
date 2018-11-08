@@ -10,14 +10,14 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class ViewController: UIViewController {
+class MapController: UIViewController {
     
     @IBOutlet weak var mapKitView: MKMapView!
     
     let locationManager = CLLocationManager()
     
     let workLocation = CLLocation(latitude: -30.0593446, longitude: -51.1756799)
-    let homeLocation = CLLocation(latitude: -30.0644842, longitude: -51.2031559)
+    let homeLocation = CLLocation(latitude: -30.0368367, longitude: -51.2160596)
     
 //    @IBAction func CalculateRoutes(_ sender: UIButton) {
 //        setupRota()
@@ -34,6 +34,12 @@ class ViewController: UIViewController {
         setupLongPressGesture()
         
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        setupRota()
     }
     
     
@@ -82,7 +88,7 @@ class ViewController: UIViewController {
 
 // Location manager delegate
 
-extension ViewController: CLLocationManagerDelegate {
+extension MapController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         
@@ -103,7 +109,7 @@ extension ViewController: CLLocationManagerDelegate {
     }
 }
 
-extension ViewController: MKMapViewDelegate {
+extension MapController: MKMapViewDelegate {
     
     func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
         if firstTime {
@@ -121,7 +127,7 @@ extension ViewController: MKMapViewDelegate {
     
 }
 
-extension ViewController{
+extension MapController{
     func setupRota() {
         let sourceLocation = homeLocation.coordinate
         let destinationLocation = workLocation.coordinate

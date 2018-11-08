@@ -4,10 +4,10 @@ class NiveisService {
     
     func nivel(pesoTotal : Int) -> String {
         var nivel = "";
-        if pesoTotal < 20{
+        if pesoTotal < 50{
             nivel = "Básico"
         }
-        else if pesoTotal < 40{
+        else if pesoTotal < 80{
             nivel = "Intermediário"
         }
         else{

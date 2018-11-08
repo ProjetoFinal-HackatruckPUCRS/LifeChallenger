@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4RO-Fp-SOS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4RO-Fp-SOS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,7 +33,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ati-7d-5zP">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ati-7d-5zP">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -51,8 +52,8 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Auu-x1-rKM"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AAAAAAAA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d22-YD-K4H">
-                                <rect key="frame" x="16" y="64" width="343" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AAAAAAAA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d22-YD-K4H">
+                                <rect key="frame" x="16" y="106" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="dZE-jT-Chv"/>
                                     <constraint firstAttribute="height" constant="50" id="dbi-Dm-VLe"/>
@@ -65,10 +66,10 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6BL-az-tvh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6Xc-1G-mfR"/>
-                            <constraint firstItem="d22-YD-K4H" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7b3-Vq-zvy"/>
+                            <constraint firstItem="d22-YD-K4H" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="42" id="7b3-Vq-zvy"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6BL-az-tvh" secondAttribute="bottom" id="GIc-it-YvJ"/>
                             <constraint firstAttribute="trailing" secondItem="6BL-az-tvh" secondAttribute="trailing" id="Wwp-TG-mx3"/>
-                            <constraint firstItem="6BL-az-tvh" firstAttribute="top" secondItem="d22-YD-K4H" secondAttribute="bottom" constant="8" id="ZYg-d9-Gca"/>
+                            <constraint firstItem="6BL-az-tvh" firstAttribute="top" secondItem="d22-YD-K4H" secondAttribute="bottom" constant="-34" id="ZYg-d9-Gca"/>
                             <constraint firstItem="d22-YD-K4H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="etQ-C0-8fk"/>
                             <constraint firstItem="d22-YD-K4H" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kol-df-k6n"/>
                         </constraints>
@@ -127,7 +128,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trilha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zb8-hZ-9nG">
-                                                            <rect key="frame" x="66" y="9" width="274" height="49.5"/>
+                                                            <rect key="frame" x="66" y="6" width="281" height="55"/>
                                                             <color key="backgroundColor" red="0.88235294119999996" green="0.59607843140000005" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="45"/>
                                                             <nil key="textColor"/>
