@@ -27,6 +27,8 @@ class TrilhasViewController: UIViewController, UITableViewDataSource, UITableVie
             self.tableView.reloadData()
         }
         
+        
+        
         // Do any additional setup after loading the view.
     }
 
