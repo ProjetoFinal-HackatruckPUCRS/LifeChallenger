@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SensorDAO.swift"
-            timestampString = "563369204.693769"
+            timestampString = "563372508.613176"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "init(json:)"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "getInfo(callback:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

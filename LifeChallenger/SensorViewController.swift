@@ -17,6 +17,7 @@ class SensorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.batimento.text = "Seu batimento:\n Buscando na nuvem..."
         setupGif()
         setupRefresh()
         
@@ -26,7 +27,9 @@ class SensorViewController: UIViewController {
     func setupGif() {
         let gif_user = UIImage.gifImageWithName("heart")
         let image = UIImageView(image: gif_user)
-        image.frame = CGRect(x: 20, y: 500, width:self.view.frame.size.width - 40, height: 150.0)
+        image.frame = CGRect(x: 40, y: 425, width:self.view.frame.size.width - 80, height: 200.0)
+        image.layer.cornerRadius = 100
+        image.clipsToBounds = true
         view.addSubview(image)
     }
 
@@ -43,7 +46,7 @@ class SensorViewController: UIViewController {
         // Fetch
 //        var bat : SensorBMP
         SensorDAO.getInfo { (bat) in
-            self.batimento.text = bat.batimento.description
+            self.batimento.text = "Seu batimento:\n" + bat.batimento.description + " por minuto"
         }
         
         

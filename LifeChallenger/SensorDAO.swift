@@ -14,7 +14,8 @@ class SensorBMP {
     var _id: String
     
     init(json: [String: AnyObject]) {
-        self.batimento = json["batimento"] as? Double ?? 0.0
+        let data = (json["d"] as? [String: Any])
+        self.batimento = data?["batimento"] as? Double ?? 0.0
         self._id = json["_id"] as? String ?? ""
         self._rev = json["_rev"] as? String ?? ""
     }
