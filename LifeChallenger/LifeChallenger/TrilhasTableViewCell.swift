@@ -9,22 +9,27 @@
 import UIKit
 
 class TrilhasTableViewCell: UITableViewCell {
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
-    
+        
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     @IBOutlet weak var imageTrilhas: UIImageView!
-
+    
     @IBOutlet weak var labelTrilhas: UILabel!
     
+    
+}
+
+class TrilhasCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var imagem: UIImageView!
     
 }
