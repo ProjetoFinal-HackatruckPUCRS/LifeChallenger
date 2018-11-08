@@ -69,7 +69,7 @@ extension TrilhasViewController : UICollectionViewDataSource, UICollectionViewDe
         
         let screenSize = UIScreen.main.bounds
         
-        return CGSize(width: 200, height: 280)
+        return CGSize(width: 180, height: 260)
     }
     
 }
