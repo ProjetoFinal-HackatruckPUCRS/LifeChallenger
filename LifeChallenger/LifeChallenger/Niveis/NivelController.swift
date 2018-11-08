@@ -1,9 +1,10 @@
 import UIKit
 
-class NivelController: UIViewController, UITableViewDataSource {
+class NivelController: UIViewController {
     
     var titulo : String?
     var desafios: [Desafios] = []
+    var desafioSelecionado  :Desafios?
     @IBOutlet weak var NivelTitulo: UILabel!
     
     override func viewDidLoad() {
@@ -15,6 +16,14 @@ class NivelController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? MaterialController{
+            destination.materiais = desafioSelecionado?.materiais
+        }
+    }
+}
+
+extension NivelController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return desafios.count
     }
@@ -23,9 +32,15 @@ class NivelController: UIViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "desafios", for: indexPath) as! CellResposta
         let text = desafios[indexPath.row].desafio
         print(text)
-        cell.labelNivel.text = text
+        cell.label.text = text
         
         return (cell)
     }
+}
 
+extension NivelController : UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        desafioSelecionado = desafios[indexPath.row]
+        performSegue(withIdentifier: "materialSegue", sender: nil)
+    }
 }

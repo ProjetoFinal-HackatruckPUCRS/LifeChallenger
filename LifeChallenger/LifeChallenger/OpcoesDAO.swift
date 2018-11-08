@@ -36,6 +36,10 @@ class OpcoesDAO {
                 do {
                     if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [[String: String]] {
                         
+                        if json.count == 0{
+                            return;
+                        }
+                        
                         var opcoes : [String] = []
                         var count = 1
                         var option = "option" + String(count)
