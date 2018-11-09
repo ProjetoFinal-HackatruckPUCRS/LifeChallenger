@@ -6,8 +6,10 @@ class MaterialController : UIViewController, UITableViewDataSource {
     
     var materiais : [String]?
     
+    @IBOutlet weak var materiaisTableView: UITableView!
+    
     override func viewDidLoad() {
-        
+        materiaisTableView.backgroundColor = .clear
         super.viewDidLoad()
     }
 

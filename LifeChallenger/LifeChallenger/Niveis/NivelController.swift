@@ -6,8 +6,12 @@ class NivelController: UIViewController {
     var desafios: [Desafios] = []
     var desafioSelecionado  :Desafios?
     @IBOutlet weak var NivelTitulo: UILabel!
+    @IBOutlet weak var niveisTableView: UITableView!
     
     override func viewDidLoad() {
+        
+        niveisTableView.backgroundColor = .clear
+        
         NivelTitulo.text = titulo
         desafios.append(Desafios(desafio: "Nível 1", descr: "Neste nível você irá se preparar para o decorrer dos desafios intermediários", materiais: ["Tenis de corrida","Camisa anti suor","E nosso medidor de batimento de cardíaco"]))
         desafios.append(Desafios(desafio: "Nível 2", descr: "Neste nível você estará começando algumas práticas do nível intermediário", materiais: ["Tenis de corrida","Camisa anti suor","E nosso medidor de batimento de cardíaco"]))

@@ -19,7 +19,9 @@ class OpcoesViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tipoTrilha.text = trilha?.nomeTrilha
+        //tipoTrilha.text = trilha?.nomeTrilha
+        
+        tableView.separatorColor = UIColor.clear;
         
         
         OpcoesDAO.getInfo(callback: { (opcoes) in

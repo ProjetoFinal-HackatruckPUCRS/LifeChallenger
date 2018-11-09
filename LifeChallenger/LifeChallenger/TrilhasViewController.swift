@@ -23,7 +23,7 @@ class TrilhasViewController: UIViewController {
             self.trilhas = trilha
             self.trilhasCollection.reloadData()
         }
-        
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,8 +59,9 @@ extension TrilhasViewController : UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TrilhaCell", for: indexPath) as! TrilhasCollectionViewCell
+        let trilha = trilhas[indexPath.row]
         
-        cell.imagem.image = UIImage(named: "Esportes");
+        cell.imagem.image = UIImage(named: trilha.nomeTrilha);
         
         return cell
     }
@@ -68,8 +69,10 @@ extension TrilhasViewController : UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let screenSize = UIScreen.main.bounds
+        let wdt = screenSize.width * 0.4
+        let hgt = screenSize.height * 0.3
         
-        return CGSize(width: 180, height: 260)
+        return CGSize(width: wdt, height: hgt)
     }
     
 }

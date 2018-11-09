@@ -17,6 +17,8 @@ class PerguntasController: UIViewController {
     @IBOutlet weak var tituloPergunta: UILabel!
     
     override func viewDidLoad() {
+        
+        tableView.backgroundColor = UIColor.clear
 
         PerguntasDAO.getInfo(callback: { (pergunta) in
             self.perguntas = pergunta

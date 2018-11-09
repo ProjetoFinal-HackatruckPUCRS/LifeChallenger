@@ -260,7 +260,7 @@
 				3FB8DBC3218B32EF0018145A /* TrilhasViewController.swift in Sources */,
 				3FB8DBC7218B3C520018145A /* OpcoesViewController.swift in Sources */,
 				3FB8DBAC218B1D770018145A /* LifeChallenger.xcdatamodeld in Sources */,
-				3F6A96F42191C6090042BC68 /* OpcaoTableViewCell.swift in Sources */,				
+				3F6A96F42191C6090042BC68 /* OpcaoTableViewCell.swift in Sources */,
 				3FB8DBC5218B33AF0018145A /* TrilhasTableViewCell.swift in Sources */,
 				3F6A96F22191B8E30042BC68 /* OpcoesDAO.swift in Sources */,
 			);
