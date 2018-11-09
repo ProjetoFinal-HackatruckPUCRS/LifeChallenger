@@ -3,7 +3,6 @@ import UIKit
 
 
 class MaterialController : UIViewController, UITableViewDataSource {
-    
     var materiais : [String]?
     
     @IBOutlet weak var materiaisTableView: UITableView!

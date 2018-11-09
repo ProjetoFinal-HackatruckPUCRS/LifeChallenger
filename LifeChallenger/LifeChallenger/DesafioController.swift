@@ -12,5 +12,10 @@ import UIKit
 
 class DesafioController : UIViewController {
     @IBOutlet weak var textoDescricao: UITextView!
+    var descr = "Neste nível você irá se preparar para o decorrer dos desafios intermediários"
     var titulo : String?
+    
+    override func viewDidLoad() {
+        textoDescricao.text = descr
+    }
 }
